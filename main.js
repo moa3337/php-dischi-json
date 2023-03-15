@@ -4,10 +4,9 @@ createApp({
     data() {
         return {
             apiUrl: "",
-            albums: [
-            ],
-            cdDetails: [],
-            showCdDetails: [],
+            albums: [],
+            albumDetails: [],
+            showDetails: false,
         };
     },
     methods: {
@@ -19,8 +18,11 @@ createApp({
                 });
         },
 
-        showCdDetails() { },
-        hideCdDetails() { },
+        showAlbumDetails(album) {
+            this.showDetails = true;
+            this.albumDetails = album;
+        },
+        hidenAlbumDetails() { },
     },
 
     created() {
